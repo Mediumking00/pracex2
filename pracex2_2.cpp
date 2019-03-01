@@ -19,7 +19,7 @@ void sort(float x[], int N){
 
 int main(){
 	//Write your code here
-	ifstream scor("score1.txt");
+	ifstream scor("score3.txt");
 	float x[20]={};
 	string line;
 	int i=0 , t[20]={};
@@ -34,10 +34,10 @@ k=0;
 for(int j=0;j<i;j++){
 	if(x[j] >= x[j+1] || x[j] <= x[j-1])
 			if (x[j-1]!=x[j]) {
-				T<<x[j]<<" rank :"<<j+1<<endl;
+				T<<x[j]<<"="<<j+1<<endl;
 				k=0;
 			}if(x[j-1]==x[j]){
-				T<<x[j]<<" rank :"<<j-k<<endl;
+				T<<x[j]<<"="<<j-k<<endl;
 				k++;
 			}
 	}
