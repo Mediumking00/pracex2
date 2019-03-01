@@ -4,6 +4,7 @@
 using namespace std;
 
 //Write prototype of av() here.
+double av(double ,double );
 
 int main(){
     cout << av(-2.5,1.1) << "\n";
@@ -17,3 +18,19 @@ int main(){
 }
 
 //Write function definition of av() here.
+double av(double x,double y){
+  double i,max,min;
+  if(x>y){
+    max=x;
+    min=y;
+  }else{
+    max=y;
+    min=x;
+  }
+  if(x<=0||y<=0)i=0;
+  else if(max/min<=100) i=pow(x*y,0.5);
+  else {
+    i=av(x,(x+y)/2)+av(y,(x+y)/2);
+  }
+  return i;
+}
